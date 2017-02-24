@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: elasticsearch
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        service: elasticsearch
+    spec:
+      containers:
+      - args:
+        - elasticsearch
+        - -Des.cluster.name=graylog
+        image: elasticsearch:2
+        name: elasticsearch
+        resources: {}
+      restartPolicy: Always
+status: {}
