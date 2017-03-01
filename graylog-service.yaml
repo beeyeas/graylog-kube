@@ -10,6 +10,9 @@ spec:
   - name: "9000"
     port: 9000
     targetPort: 9000
+  - name: "12201"
+    port: 12201
+    targetPort: 12201
   selector:
     service: graylog
 status:

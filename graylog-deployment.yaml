@@ -17,13 +17,14 @@ spec:
         - name: GRAYLOG_WEB_ENDPOINT_URI
           value: http://127.0.0.1:9000/api
         - name: GRAYLOG_PASSWORD_SECRET
-          value: somepasswordpepper
+          value: somesaltpassword
         - name: GRAYLOG_ROOT_PASSWORD_SHA2
-          value: 415e8a6ba1c3eb93e81df34731acc3d60efee685c8e6f7412592a45ba3a0e3b0
+          value: 5D5E792708BFA15F0AB42E817B4E69379777D2722E0529DFB031C0B847DB137D
         image: graylog2/server:2.2.1-1
         name: graylog
         ports:
         - containerPort: 9000
+        - containerPort: 12201
         resources: {}
       restartPolicy: Always
 status: {}
